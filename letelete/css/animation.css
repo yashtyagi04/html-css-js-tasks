@@ -1,0 +1,30 @@
+.custom-underline-text, .custom-underline-text::after {
+  animation-duration: 2.4s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+    background-color:rgba(255,153,0,1);
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.custom-underline-text {
+  animation-name: colorIn;
+}
+@keyframes colorIn {
+  from {
+    margin-left: -100%;
+    color: rgba(255,255,255,0.1);
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
