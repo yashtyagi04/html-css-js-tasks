@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>CSS Animation for GCI</title>
+  <style>
+    #rolledPaper {
+      width: 800px;
+      height: auto;
+      margin: auto;
+      background: #d0bdaf;
+      border: 4px solid #937f6f;
+      border-radius: 50px;
+    }
+
+    #endOfPaper {
+      width: 98%;
+      height: 50px;
+      margin: auto;
+      background: #d1baa8;
+      border: 3px solid #4d321d;
+      border-radius: 50px;
+      ;
+
+      animation-name: roll;
+      animation-duration: 5s;
+      animation-iteration-count: 2;
+      animation-direction: alternate;
+    }
+
+    #header {
+      margin-top: 10%;
+      margin-bottom: 10%;
+      margin-right: 10%;
+      margin-left: 10%;
+      text-align: center;
+
+      animation-name: slideLeftRight, scale;
+      animation-duration: 3s, 1.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    #textInCenter {
+      position: absolute;
+      opacity: 0;
+      font-size: 140%;
+      margin-right: 30%;
+      margin-left: 2%;
+
+      animation-name: showText;
+      animation-duration: 3s;
+      animation-iteration-count: 2;
+      animation-direction: alternate;
+      animation-delay: 2.1s;
+    }
+
+
+    @keyframes roll{
+      from {
+        margin-top: 0%;
+      }
+
+      to {
+        margin-top: 60%;
+      }
+    }
+
+    @keyframes showText {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideLeftRight {
+      from {
+        margin-right: 99%;
+      }
+
+      to {
+        margin-left: 85%;
+      }
+    }
+
+    @keyframes scale {
+      0% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="rolledPaper">
+    <h1 id="header">Letter</h1>
+    <div id="textInCenter">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut eros in massa tempus consequat vitae sit amet orci.
+      Nullam vel cursus ipsum. Aliquam scelerisque quam sit amet nunc gravida, luctus eleifend ante tristique. Sed non metus mauris. Nam egestas
+      nibh dui, quis dignissim risus blandit nec. Suspendisse potenti. Sed eleifend nunc felis, vitae tempor enim iaculis id.
+      Curabitur eu hendrerit justo, a dignissim ante. Ut elit felis, tristique non est id, condimentum dapibus lorem. Curabitur vel
+      tortor et nunc placerat ultricies id sed ex. Nullam felis nibh, cursus et ullamcorper et, faucibus nec mi.
+      Sed ac mollis nisl. Fusce varius convallis placerat. Proin a tincidunt tortor. Cras viverra arcu eget orci efficitur, eu finibus tortor cursus.
+    </div>
+    <div id="endOfPaper"></div>
+  </div>
+</body>
+
+</html>
