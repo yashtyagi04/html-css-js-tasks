@@ -1,0 +1,59 @@
+<!-- Work In Progress -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Animation</title>
+    <style>
+    .circle{
+
+        border-radius: 50%;
+        background-color: black; 
+        color: black;
+        opacity: 0.25;
+        transform: rotate(180deg);
+        filter: drop-shadow(0px 0px 10px grey);
+        /* Keep it centered */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        margin-top: -100px;
+        transition: all 2s;
+
+
+    }
+    .circle:hover {
+        border-radius: 5%;
+        cursor: pointer;
+        opacity: 0.9;
+        color: grey;
+        transform: rotate(0deg);
+
+    }
+    .circle-text{
+        text-align: center;
+        font-size: 50px;
+        padding-top: 30px;
+
+    }
+    .imgcredits{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+    .imgcredits a{
+        text-decoration: none;
+        color: white;
+        filter: drop-shadow(0px 0px 10px grey);
+    }
+    </style>
+</head>
+<body background="background.jpg">
+    <div class="circle">
+        <h1 class="circle-text">NASEEF</h1>
+    </div>
+    <div class="imgcredits"><a href="https://pixabay.com/en/road-asphalt-space-sky-clouds-220058/">Backround Image By Larisa-K</a></div>
+</body>
+</html>
