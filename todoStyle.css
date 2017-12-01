@@ -1,0 +1,186 @@
+.addButton {
+    padding: 15px;
+    flex-grow: 1;
+    background: #d9d9d1;
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    height: auto;
+}
+
+.addButton:hover {
+    background: #aaa;
+}
+
+.inputField {
+    border: none;
+    width: 84.99%;
+    font-size: 16px;
+    background: #f9b32f;
+    height: auto;
+    float: left;
+    padding: 15px;
+
+}
+
+::placeholder {
+    color: navy;
+}
+
+li {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.check::before {
+  content: '✔';
+  position: absolute;
+  border-width: 0 0px 0px 0;
+  top: 8px;
+  left: 16px;
+  height: 15px;
+  width: 8px;
+}
+
+li:nth-child(even) {
+    background: #aaa;
+}
+
+li:hover {
+    background: #a1a1a1;
+}
+
+li.check {
+    background: #ccc;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+li {
+    cursor: pointer;
+    position: relative;
+    background: #eee;
+    font-size: 22px;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    transition: 0.2s;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.clearButton {
+    padding: 15px;
+    background: #d9d9d1;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    height: auto;
+    display: inline-block;
+    color: black;
+
+}
+
+.clearButton:hover {
+    background: #aaa;
+    color: black;
+}
+
+
+
+.add {
+    border: 0px solid blue;
+    margin: auto;
+    width: 50%;
+    display: flex;
+}
+
+.title_container {
+    font-family: 'Raleway', sans-serif;
+    color: orange;
+    font-weight: 1000;
+    display: flex;
+    border: 0px solid blue;
+    
+}
+
+
+    
+    
+
+
+.list {
+    width: 50%;
+    padding-top: 15px;
+    margin: auto;
+    border: 0px solid red;
+    min-height: 350px;
+
+}
+
+.todo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+footer {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+body {
+    background-color: #4286f4;
+}
+
+.clear {
+    padding-top: 15px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.remove {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 9.2px 16px 9.2px 16px;
+  
+  
+}
+
+.remove:hover {
+    background-color: red;
+    color: white;
+    
+}
+.instructions {
+    border: 0px solid black;
+    color: white;
+    width: 35%;
+    text-align: center;
+    margin: auto;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    color: red;
+    font-size: 40px;
+    border: 0px solid red;
+    margin: auto;
+}
+
+
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    color: red;
+    font-size: 40px;
+    text-align: center;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<head>
+    <title>To Do List</title>
+    <meta http-equiv="content-language" content="en" />
+
+    <link rel="stylesheet" type="text/css" href="todoStyle.css" title="theme-css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald|Raleway" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+
+
+</head>
+
+<body>
+    <div class="title_container">
+        <div class="title">
+            <h2>To Do</h2>
+        </div>
+
+    </div>
+
+
+    <div class="add">
+        <input class="inputField" type="text" placeholder="Add an item">
+        <span class="addButton" onclick="addToList()">Add</span>
+
+    </div>
+
+    <div class="list">
+        <ul class="todo" id="todo">
+            <!--List Elements-->
+        </ul>
+
+
+    </div>
+
+    <script type="text/javascript">
+        let $ul = $('ul');
+        let deleteElement = false;
+
+        $(document).ready(function() {
+
+            if (localStorage.getItem('list')) {
+                $ul.html(localStorage.getItem('list'));
+
+            }
+        });
+
+        let listElements = document.getElementsByTagName('li');
+        let closeButtons = document.getElementsByClassName('remove');
+
+        document.onkeydown = function(event) {
+            if (event.keyCode === 13)
+                addToList();
+            if (event.keyCode === 27)
+                clearList();
+        }
+
+        document.addEventListener("click",
+            function() {
+                for (var i = 0; i < listElements.length; i++) {
+                    closeButtons[i].onclick = function() {
+                        deleteElement = true;
+                    }
+
+                    listElements[i].onclick = function() {
+                        if (deleteElement) {
+                            deleteElement = false;
+                            this.parentNode.removeChild(this);
+                            save();
+                        } else
+                            toggleCompletion(this);
+                    }
+                }
+            }
+        );
+
+        function addToList() {
+            let textField = document.getElementsByClassName("inputField")[0];
+            let listElement = document.createElement("li");
+            let list = document.getElementById("todo");
+
+            if (textField.value == "") {
+                alert("Your task cannot be empty!");
+                return;
+            }
+            listElement.appendChild(document.createTextNode(" " + textField.value));
+            list.appendChild(listElement);
+            textField.value = "";
+
+            let closeButton = document.createElement("span");
+            closeButton.className = "remove";
+            closeButton.appendChild(document.createTextNode("\u2716"));
+
+            listElement.appendChild(closeButton);
+            save();
+
+            closeButtons.push(closeButton);
+            listElements.push(listElement);
+        }
+
+        function toggleCompletion(element) {
+            element.classList.toggle('check');
+            save();
+        }
+
+        function save() {
+            localStorage.setItem('list', $ul.html());
+        }
+
+
+        function clearList() {
+            localStorage.clear('list');
+            location.reload();
+            $ul.clear();
+        }
+
+    </script>
+
+
+
+
+    <div class="instructions">
+        <p class="help">
+            Press Enter to save your Task
+            <br> Press Escape to Clear Your List
+
+        </p>
+
+    </div>
+
+    <footer>Copyright 2017© Vignesh Joglekar</footer>
+    <!--
+    <div class="clear">
+        <span class="clearButton" onclick="clearList()">Clear List</span>
+    </div>
+    -->
+</body>
