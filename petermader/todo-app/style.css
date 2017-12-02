@@ -1,0 +1,119 @@
+html, 
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F8F8F8;
+}
+
+header {
+    top: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+
+footer {
+    height: 10vh;
+    line-height: 10vh;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+main {
+    max-width: 600px;
+    position: absolute;
+    left: calc(50% - 300px);
+    top: 20vh;
+    font-size: 140%;
+}
+
+#item-new {
+    border: 1px solid #9999CC;
+    padding: 19px;
+    width: 560px;
+}
+
+#item-list {
+    height: 300px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #999999;
+    list-style-type: none;
+}
+
+li {
+    padding: 5px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+.item-edit {
+    width: 90%;
+    border: 1px solid #9999CC;
+    padding: 3px 6px;
+}
+
+li:not(.edit) input.item-edit {
+    display: none;
+}
+
+li.edit :not(.item-edit) {
+    display: none;
+}
+
+li.complete {
+    background-color: #DDDDDD;
+}
+
+li.complete span {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+li.hidden {
+    display: none;
+}
+
+.item-remove {
+    position: absolute;
+    right: 5px;
+    height: 27px;
+    top: calc(50% - 13.5px);
+    border: 1px solid #999999;
+    background-color: #FFBBBB;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-remove:hover {
+    background-color: #FFAAAA;
+}
+
+#items-left {
+    font-size: 70%;
+    font-style: italic;
+}
+
+#filters {
+    text-align: center;
+}
+
+.filter-button {
+    border: 0;
+    cursor: pointer;
+    padding: 7px;
+    min-width: 100px;
+}
+
+.filter-button.selected {
+    border: 1px solid #999999;
+    border-top-width: 0;
+    border-radius: 0 0 4px 4px;
+}
+
