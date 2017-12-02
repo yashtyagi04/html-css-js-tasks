@@ -28,8 +28,7 @@ $(".fa-plus").click(function() {
 });
  
 function store(todoText) {
-	alert(items);
-                //add new item in the array (push)
+    //add new item in the array (push)
     items.push(todoText);
     //now push to localstorage - the whole array
     localStorage.setItem("Todos", JSON.stringify(items));
