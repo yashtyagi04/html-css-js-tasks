@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Todo list</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" charset="utf-8"></script>
+
+    </head>
+    <body>
+
+        <header>
+            <h2>Todos</h2>
+        </header>
+
+        <main>
+            <div>
+                <input 
+                    type="text" 
+                    id="item-new" 
+                    title="Hit Enter to create a new item"
+                    placeholder="Add an item">
+            </div>
+            <div>
+                <ul id="item-list">
+                </ul>
+            </div>
+            <div id="filters">
+                <button id="filter-all" class="filter-button selected">All</button>
+                <button id="filter-active" class="filter-button">Active</button>
+                <button id="filter-complete" class="filter-button">Completed</button>
+            </div>
+            <div id="items-left">0 items left</div>
+        </main>
+
+        <!-- template for an entry in the todo list -->
+        <template id="item-template">
+            <li>
+                <!-- represents whether the item is completed (checked) or not (not checked) -->
+                <input type="checkbox" class="item-complete-checkbox">
+
+                <span class="item-text" title="Double-click to edit"></span>
+                <input type="text" class="item-edit" title="Hit Escape to cancel, hit Enter to confirm">
+                <button class="item-remove" title="Remove this item">&times;</button>
+            </li>
+        </template>
+
+        <footer>
+            Todo app by 
+            <em>Peter Mader</em>
+            &mdash; 
+            <a href="https://github.com/PeterMader/todo-app">GitHub repo</a>
+        </footer>
+
+    </body>
+</html>
+
