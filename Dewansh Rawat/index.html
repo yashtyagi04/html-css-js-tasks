@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<title>Dewansh Rawat</title>
+</head>
+<style type="text/css">
+	
+	body{
+		overflow-x: hidden;
+		margin: 0;
+	}
+
+	.section{
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+	}
+
+	.theme{
+		background: #f8f8f8;
+	}
+
+	.theme2{
+		background: #fff;
+	}
+
+	.title{
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		font-size: 42px;
+		font-family: 'Raleway';
+		color: #13171c;
+	}
+
+	.line{
+		position: absolute;
+		top: 54%;
+		left: 25%;
+		height: 2px;
+		border: 0;
+		outline: none;
+		transform: translate(-50%, -50%);
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		width: 22vw;
+		background: #13171c;
+	}
+
+	.slided-div{
+		position: absolute;
+		width: 100vw;
+		height: 200vh;
+		left: 50%;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		transform: rotate(45deg);
+		background: #ffc107;
+	}
+
+	.about{
+		height: 70vh;
+	}
+
+	.about-title{
+		position: absolute;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		top: 30%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+		font-size: 36px;
+		font-family: 'Raleway';
+		color: #13171c;
+	}
+
+	.about-text{
+		position: absolute;
+		top: 50%;
+		left: 46.5%;
+		font-size: 18px;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		font-family: 'Raleway';
+		transform: translate(-50%, -50%);
+	}
+
+	.blog{
+		position: absolute;
+		top: 80%;
+		transition: 300ms ease;
+		left: 25%;
+		width: 20vw;
+		height: 5vh;
+		padding-top: 2vh;
+		box-shadow: 0 0 0 0 #ffc107 inset;
+		border: 1px solid #13171c;
+		cursor: pointer;
+		padding-bottom: 2vh;
+	}
+
+	.blog:hover{
+		transition: 300ms ease;
+		box-shadow: 20em 0 0 0 #ffc107 inset;
+	}
+
+	.blog:hover>.blog-text{
+		transition: 300ms ease;
+		color: #fff;
+	}
+
+	.blog-text{
+		transition: 300ms ease;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		color: #fff;
+		font-family: 'Raleway';
+		font-size: 20px;
+		color: #13171c;
+		transform: translate(-50%, -50%);
+	}
+
+	.contact{
+		height: 70vh;
+	}
+
+	.contact-title{
+		position: absolute;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		top: 40%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+		font-size: 36px;
+		font-family: 'Raleway';
+		color: #13171c;
+	}
+
+	.contact-text{
+		position: absolute;
+		top: 65%;
+		left: 46%;
+		font-size: 18px;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		font-family: 'Raleway';
+		transform: translate(-50%, -50%);
+	}
+
+	.contact-tile{
+		position: absolute;
+		top: 105%;
+		left: 20%;
+		border-radius: 100%;
+		vertical-align: middle;
+		display: inline;
+		cursor: pointer;
+		width: 20vmin;
+		height: 20vmin;
+		background: #ffc107;
+	}
+
+	.tile2{
+		left: 45%;
+	}
+
+	.tile3{
+		left: 70%;
+	}
+
+	.ico{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-size: 64px;
+		font-family: 'Raleway';
+	}
+
+	.footer{
+		position: absolute;
+		top: 300vh;
+		height: 20vh;
+		padding-top: 2vh;
+		padding-bottom: 2vh;
+		background: #13171c;
+		width: 100vw;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+
+	}
+
+	.footer-text{
+		position: absolute;
+		top: 50%;
+		left: 50%;		
+		color: #fff;
+		font-size: 20px;
+		font-family: 'Raleway';
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		transform: translate(-50%, -50%);
+	}
+/*
+	.arrow{
+		position: absolute;
+		top: 85%;
+		left: 50%;
+		transition: 500ms cubic-bezier(0.2, 0.4, 0.75, 0.9);
+		transform: translate(-50%, -50%) rotate(-45deg);
+		width: 3em;
+		height: 3em;
+		cursor: pointer;
+		border-left: 2px solid #13171c;
+		border-bottom: 2px solid #13171c;
+	}
+*/
+
+</style>
+<body>
+<div class="home section">
+	<div class="title">Dewansh Rawat</div>
+	<div class="line"></div>
+	<div class="slided-div">
+		<div class="img"></div>
+	</div>
+	<div class="arrow"></div>
+</div>
+<div class="about section theme">
+	<div class="about-title">About Me</div>
+	<div class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+	<div class="blog">
+		<div class="blog-text">Check Out More</div>
+	</div>
+</div>
+<div class="contact section theme2">
+	<div class="contact-title">Contact Me</div>
+	<div class="contact-text">Have any work that is to be done..?? I'm your best shot. Let's get in touch. Pick Your Favourite Means Of Communication</div>
+	<div class="contact-tile tile1"><div class="ico">g+</div></div>
+	<div class="contact-tile tile2"><div class="ico">f</div></div>
+	<div class="contact-tile tile3"><div class="ico">i</div></div>
+</div>
+<div class="footer"><div class="footer-text">Made By Dewansh Rawat</div></div>
+</body>
+</html>
