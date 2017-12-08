@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width: 600px;
+    height: 600px;
+    background-color: red;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 100;
+}
+@-webkit-keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+</style>
+</head>
+
+<p> CSS ANIMATION FOR GCI TASK: </p>
+<body>
+
+<div></div>
+
+</body>
+</html>
